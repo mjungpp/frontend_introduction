@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div, span {
+        width: 80px;
+        height: 80px;
+        margin: 20px;
+    }
+
+    div{
+        background-color: red;
+        display: inline-block;
+        /* display:inline --> content 자체만을 꾸며주는 것 */
+    }
+    span{
+        background-color: pink;
+        /* display 요소를 inline에서 block으로 변경함 */
+        display: block; 
+    }
+</style>
+<body>
+    <!-- Block-level -->
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <!-- Inline-level -->
+    <!-- span은 안에 내용이 있어야만 노출됨 -->
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+</body>
+</html>

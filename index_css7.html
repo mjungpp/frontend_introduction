@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* selector : 페이지 위의 요소들 중 어떤 아이들을 선택할 것인지 결정하는 selector */
+    .box {
+        /* 어떤 속성들을 꾸며줄 것인지 결정하는 property / 해당하는 values */
+        width : 200px;
+    }
+</style>
+<body>
+    CSS 값
+    절대적인 값(Absolute)
+    -----------------------------------------------------------
+    절대적인 값 : px
+    발생할 수 있는 문제
+    container의 사이즈가 변경되어도 content가 고정된 값으로 유지됨,
+    브라우저에서 폰트 사이즈 설정을 바꿔도 반응하지 않음
+    -> %를 이용해서 부모의 80%를 표기하는 방법으로 많이 사용
+
+    상대적인 값(Relative)
+    -----------------------------------------------------------
+    상대적인 값 : em, rem, vw, vh, %
+
+    em
+    - 타이포그래피에서 현재의 지정된 포인트 사이즈를 나타낸 단위
+    지금 폰트사이즈를 나타내는 단위
+    - em은 선택된 폰트 패밀리에 상관 없이, 선택된 폰트에 전혀 상관 없이 항상 고정된 폰트 사이즈를 갖고 있음
+    - em은 부모의 폰트사이즈에 상대적으로 크기가 계산되어짐
+
+    ex) 기본 폰트 사이즈는 16px
+    Parent의 폰트가 8em, 자식이 0.5em이라면
+    parent : 16px * 8 = 128px; parent의 부모 요소인 HTML의 16픽셀의 8배가 곱해진 값
+    child : 128px(부모 픽셀) * 0.5 = 64px;
+
+    --> 폰트 사이즈에서 em 대신에 800%라고 지정하는 것과 동일함
+
+    .parent {
+        font-size : 8em; == font-size : 800%
+    }
+    
+    .child {
+        font-size : 0.5em == font-size : 50%
+    }
+
+    즉, em은 부모의 폰트 사이즈를 곱한 값으로 계산이 된다.
+
+    rem
+    - em에 r이 더해진 형태, r는 root
+    부모에 따라 사이즈가 계산되는 것이 아니라, 루트에 지정된 폰트 사이즈에 따라 크기가 계산됨
+
+    .parent {
+        font-size : 8rem;
+        HTML에서 기본적으로 지정된 16픽셀의 8배가 곱해진 128픽셀
+    }
+    .child {
+        font-size : 0.5rem;
+        최고 루트인 HTML의 16픽셀에 0.5가 곱해진 8픽셀
+    }
+
+    즉, em은 부모 요소의 상대적으로 크기가 결정이 되고 rem은 루트em은 루트 요소에 상대적으로 크기가 결정됨
+
+    html에 폰트 사이즈를 지정하지 않으면 기본적으로 폰트 사이즈가 100%로 지정됨
+    html {
+        font-size : 100%;
+    }
+    브라우저에서 지정된 폰트 사이즈를 따라간다라는 말.
+    즉, 브라우저 환경에서 폰트 사이즈를 변경하게 되면 자동적으로 페이지도 반응적으로 폰트 사이즈가 변경됨
+
+    반대로, 여기에 100%가 아니라 고정된 픽셀 값을 루트에서 사용하게 되면 반응형이 되지 않음
+
+    vw (viewport relate)
+    viewport width viewport 너비에 있는 100%를 쓰겠다
+    ex) 50vw : viewport width의 브라우저의 너비에 반을 쓰겠다고 지정하는 것
+
+    vh (viewport height)
+    
+    vmin 
+    : 브라우저의 너비와 높이 중에 작은 값
+
+    vmax
+    : 브라우저의 너비와 높이 중에 큰 값 
+
+
+    %
+    부모 요소의 상대적으로 크기가 계산되어짐
+
+    <div class="box">
+
+    </div>
+</body>
+</html>

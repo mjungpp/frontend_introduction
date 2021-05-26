@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em vs rem 실전 프로젝트</title>
+    <style>
+       h1 {
+        font-size: 1.75rem;
+        color : burlywood;
+        margin: auto;
+        text-align: center;
+       }
+
+       .container {
+           display: flex;
+           padding: 2em;
+       }
+
+       .component {
+           border: 1px solid burlywood;
+           margin: 16px;
+       }
+
+       .title {
+           font-size: 1.5rem;
+           padding: 1em;
+           background-color: burlywood;
+       }
+
+       .contents {
+           font-size: 1.125rem;
+           padding: 1em;
+       }
+
+       @media screen and (max-width: 48rem) {
+           .container {
+               flex-direction: column;
+           }
+       }
+
+    </style>
+</head>
+<body>
+   <h1>Dream Coding</h1>
+  <div class="container">
+      <section class="component">
+          <header class="title">Master Front-end✨</header>
+          <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime beatae, accusamus modi harum at in obcaecati ullam explicabo veritatis deleniti dignissimos nesciunt mollitia cupiditate minus, sed fuga nulla natus, eligendi minima quasi voluptates tempore reiciendis suscipit perspiciatis! Nisi accusamus et ipsa voluptatum, dolor minus, fuga esse vel non vitae quia?</p>
+      </section>
+
+      <section class="component">
+          <header class="title">Career Growth 🚀</header>
+          <p class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem porro delectus quaerat et mollitia quia minima laborum, fugit eum deserunt quis nobis rem animi nesciunt eligendi architecto ipsum itaque eius! Sunt placeat possimus beatae voluptates, molestiae et hic assumenda nemo repellendus perferendis atque nulla temporibus, ab quis voluptatibus quibusdam doloribus!</p>
+      </section>
+  </div>
+</body>
+</html>

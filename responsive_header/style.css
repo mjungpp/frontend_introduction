@@ -1,0 +1,114 @@
+/* 색상 박아놓고 쓰기 */
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #d49466;
+}
+
+/* 원하지 않는 spacing 제거  */
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* a 태그 스타일 제거 */
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.navbar {
+  /* flexbox 선언 */
+  display: flex;
+  /* 중심축에서 아이템 배치 선언 */
+  justify-content: space-between;
+  /* 반대축에서 아이템 배치 선언 */
+  align-items: center;
+  background-color: #263343;
+  /*  위 아래 , 오른쪽 왼쪽*/
+  padding: 8px 12px;
+}
+
+.navbar_logo {
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.navbar_logo i {
+  color: #d49466;
+}
+
+.navbar_menu {
+  /* li 아이템 가로로 정렬됨 */
+  display: flex;
+  list-style: none;
+  /* 메뉴를 정확히 중간에 배치 (패딩 제거) */
+  padding-left: 0;
+}
+.navbar_menu li {
+  /* li 간격 spacing */
+  /* margin값을 넣으면 클릭할 수 있는 범위가 좁아짐, padding은 넓어짐 */
+  /*  위 아래 , 오른쪽 왼쪽*/
+  padding: 8px 12px;
+}
+.navbar_menu li:hover {
+  background-color: #d49466;
+  border-radius: 4px;
+}
+.navbar_icons {
+  list-style: none;
+  color: white;
+  display: flex;
+}
+.navbar_icons li {
+  /*  위 아래 , 오른쪽 왼쪽*/
+  padding: 8px 12px;
+}
+
+/* 제일 오른쪽 위에 배치 */
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #d49466;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    /* hover시 좌우 여백 공간 주기 위해 */
+    padding: 8px 24px;
+  }
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    /* 메뉴 너비가 작아서 center로 해도 중심축으로 안감, width 채워줌 */
+    width: 100%;
+  }
+
+  .navbar_menu li {
+    width: 100%;
+    /* 텍스트가 왼쪽으로 감, 텍스트가 왼쪽 정렬돼서, 텍스트 가운데 배치 필요 */
+    text-align: center;
+  }
+
+  .navbar_icons {
+    display: none;
+    justify-content: center;
+    /* 너비가 작아서 설정해도 중간으로 x */
+    width: 100%;
+    /* padding이 있어 정확히 가운데에 오지 않음 */
+    padding-left: 0;
+  }
+
+  .navbar_toggleBtn {
+    display: block;
+  }
+
+  .navbar_menu.active,
+  .navbar_icons.active {
+    display: flex;
+  }
+}

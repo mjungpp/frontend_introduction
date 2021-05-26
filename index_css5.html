@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flexbox</title>
+</head>
+<style>
+.container {
+    background: beige;
+    height: 100vh;
+    /*
+    100% vs 100vh
+    % : container가 들어있는 부모(body)의 높이의 100%
+    vh : 부모에 관계없이 보이는 뷰포트에 100% 사용함
+    */
+
+    /* container 레벨 속성값 */
+    /* flexbox 선언 : display : flex */
+    display: flex; 
+
+    /* 열 방향 (기본축 : 열, 반대축 : 행) 
+    default값 row (왼쪽에서 오른쪽 방향) row-reverse : 오른쪽에서 왼쪽 방향
+    행 방향 (기본축 : 행, 반대축 : 열) */
+    flex-direction: row;
+    
+    /*
+    flex-wrap
+    flex-wrap : nowrap; // 기본값 
+    flex-wrap : nowrap wrapping을 하지 않겠다고 선언함, 아이템들이 꽉 차도 한줄에 계속 붙어있음 
+    flex-wrap : wrap으로 선언시 아이템들이 꽉 차면 자동적으로 다음 라인으로 넘어감 
+    flex-wrap : wrap-reverse; 반대로 래핑됨 */
+
+    /*
+    flex-flow
+    direction + wrap 합친 것
+    flex-flow : row wrap;
+    */
+
+    /* 
+    justify-content
+    - 중심축에서 어떻게 아이템들을 배치할지 결정
+
+    flex-start : default, 왼 -> 오 
+    flex-end : 오른쪽으로 아이템 배치 
+    center : 아이템들을 센터로 맞춰서 정렬 
+    space-around : box를 둘러싸게 spacing을 넣어줌 
+    space-evenly : 똑같은 간격을 넣음 
+    space-between : item의 왼쪽과 오른쪽은 화면에 맞게 배치하고, 중간에만 item 간격을 넣음
+    */
+    justify-content: space-between;
+
+    /* 
+    align-items
+    - 반대 축에서 아이템들을 어떻게 배치할건지 결정 
+    align-items : center (상자를 반대축 중간에 배치) 
+    align-items: baseline; 텍스트가 모두 균일하게 배치됨
+    */
+    align-items: baseline;
+
+    /* align-content : 반대축 아이템 지정
+    align-content: space-between 위와 아래는 붙어있으면서, item들에 스페이스가 들어감
+    align-content: space-between;
+    center : 중간에 아이템 배치 */
+    align-content: center;
+}
+/* item 레벨 속성값 */
+.item {
+    width: 40px;
+    height: 40px;
+    border : 1px solid black;
+
+}
+.item1 {
+    background: #ef9a9a;
+}
+.item2 {
+    background: #f48fb1;
+}
+.item3 {
+    background: #ce93d8;
+}
+.item4 {
+    background: #b39ddb;
+}
+.item5 {
+    background: #90caf9;
+}
+.item6 {
+    background: #a6ee9c;
+}
+.item7 {
+    background: #e6ee9c;
+}
+.item8 {
+    background: #fff59d;
+}
+.item9 {
+    background: #ffcc80;
+}
+.item10 {
+    background: #ffab91;
+}
+
+</style>
+<body>
+    <!-- emmet -->
+    <!-- .container>div.item.item${$}*10 -->
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+
+    </div>
+
+    <!-- color tool
+    색상을 사용해 UI를 미리 적용해볼 수 있음
+    https://material.io/resources/color/#!/?view.left=0&view.right=0
+    -->
+
+</body>
+</html>

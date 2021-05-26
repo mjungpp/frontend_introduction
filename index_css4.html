@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+        background: red;
+    }
+    .container{
+        background: yellow;
+        /* default값 */
+        /* position: static; */
+        position: relative;
+        left: 20px;
+        top:20px;
+    }
+    .box{
+        background: blue;
+        left: 20px;
+        top:20px;
+        /* position: relative; */
+        /* absolute : 아이템이 담겨있는 상자 안(container)에서 옮겨감, */
+        /* relative : 원래 아이템이 있어야할 자리에서 상대적으로 옮겨감 */
+        /* fixed : 상자 안에서 완전히 벗어나서, window 안에서 움직임. */
+        /* sticky : 원래 있던 그 자리에 있으면서, scrolling해도 없어지지 않고 그대로 있음 */
+        position: sticky;
+    }
+</style>
+<body>
+    <!-- 
+        CSS 브라우저 지원 확인
+        https://caniuse.com/?search=sticky
+     -->
+    <article class="container">
+        <div></div>
+        <div class="box">I'm box</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </article>
+</body>
+</html>
