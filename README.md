@@ -7,7 +7,6 @@
 <br/>
 
 <h2 align="center"><em>Learned 👩‍🎓</em></h2>
-<br/>
 <p align="center"><em>❤️ HTML </em></p>
 
 ```
@@ -28,7 +27,7 @@
 
 ```
 - Responsive Header
-- Youtube Site Clone Coding
+- Youtube Site Clone Coding(Responsive)
 ```
 
  <br/>
